@@ -112,7 +112,15 @@ class InformationAnalysis:
                 # Se marginais forem zero, ignore (teoricamente impossível)
                 if p_a == 0 or p_b == 0:
                     continue   # ou trate como erro
-    
+
+                if np.isinf(p_a):
+                    print("p_a is inf")
+                if np.isinf(p_b):
+                    print("p_b is inf")
+
+                if p_b*p_a==0:
+                    print("p_b*p_a==0")
+                    
                 mutual += p_ab * np.log2(p_ab / (p_a * p_b))
     
         return mutual
