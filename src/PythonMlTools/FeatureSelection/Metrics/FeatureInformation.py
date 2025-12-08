@@ -117,9 +117,12 @@ class InformationAnalysis:
                     print("p_a is inf")
                 if np.isinf(p_b):
                     print("p_b is inf")
-
                 if p_b*p_a==0:
                     print("p_b*p_a==0")
+                if p_a==0:
+                    print("p_a==0")
+                if p_b==0:
+                    print("p_b==0")
                     
                 mutual += p_ab * np.log2(p_ab / (p_a * p_b))
     
