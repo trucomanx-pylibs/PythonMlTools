@@ -118,7 +118,7 @@ class InformationAnalysis:
                 if np.isinf(p_b):
                     print("p_b is inf")
                 if p_b*p_a==0:
-                    print("p_b*p_a==0")
+                    print("p_b*p_a==0","p_b",p_b,"p_a",p_a)
                 if p_a==0:
                     print("p_a==0")
                 if p_b==0:
