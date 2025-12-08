@@ -110,7 +110,7 @@ class InformationAnalysis:
                     continue
     
                 # Se marginais forem zero, ignore (teoricamente impossível)
-                if p_a == 0 or p_b == 0:
+                if p_a == 0 or p_b == 0 or p_a*p_b == 0:
                     continue   # ou trate como erro
 
                 if np.isinf(p_a):
