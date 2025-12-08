@@ -98,14 +98,26 @@ class InformationAnalysis:
 
     def MutualInformation(self):
         # Mutual information
-        mutual=0.0;
+        mutual = 0.0
         for na in range(self.bins_a):
             for nb in range(self.bins_b):
-                if self.Pab[na][nb]!=0 :
-                    mutual=mutual+self.Pab[na][nb]*np.log2(self.Pab[na][nb]/(self.Pa[na]*self.Pb[nb]));
-        
-        return mutual;
-        
+                p_ab = self.Pab[na][nb]
+                p_a  = self.Pa[na]
+                p_b  = self.Pb[nb]
+    
+                # Se Pab = 0 → contribuição = 0
+                if p_ab == 0:
+                    continue
+    
+                # Se marginais forem zero, ignore (teoricamente impossível)
+                if p_a == 0 or p_b == 0:
+                    continue   # ou trate como erro
+    
+                mutual += p_ab * np.log2(p_ab / (p_a * p_b))
+    
+        return mutual
+
+    
     def JointEntropy(self):
         # Joint information
         joint=0.0;
