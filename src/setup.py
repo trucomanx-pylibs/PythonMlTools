@@ -16,7 +16,7 @@ setup(
                 'PythonMlTools.FeatureSelection.Analysis',
                 'PythonMlTools.FeatureSelection.Metrics'],
     #scripts=['bin/script1','bin/script2'],
-    url='https://github.com/trucomanx/PythonMlTools',
+    url='https://github.com/trucomanx-pylibs/PythonMlTools',
     license='GPLv3',
     description='Machine learning tools',
     #long_description=open('README.txt').read(),

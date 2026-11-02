@@ -5,7 +5,7 @@ Python Machine Learning Tools
 
 Download the source code
 
-    git clone https://github.com/trucomanx/PythonMlTools.git
+    git clone https://github.com/trucomanx-pylibs/PythonMlTools.git
 
 The next command generates the `dist/PythonMlTools-VERSION.tar.gz` file.
 
